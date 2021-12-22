@@ -1,16 +1,28 @@
-# provider_flutter_example
+# provider Flutter Example
 
-A new Flutter project.
+The purpose od this project is learn about (provider)[https://pub.dev/packages/provider] with dependency injection and state management.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project has three usages of provider:
+### Provider simple 
+your usage is to inject simply a dependency of a object.
 
-A few resources to get you started if this is your first Flutter project:
+declaration in (main.dart)[lib/main.dart] and watch in (produto_widget)[lib/provider/produto_widget.dart] and (provider_page)[lib/provider/provider_page.dart]
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### ChangeNotifierProvider
+your usage is to has reactivity of change notifier with dependency injection of provider, and can has methods to make thinks.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+declaration in (main.dart)[lib/main.dart] and (provider controller)[lib/change_notifier/provider_controller.dart] and watch in (change notifier page)[lib/change_notifier/change_notifier_page.dart] 
+
+### Multiprovider
+The purpose of that is to easyly declare in main.dart the many providers simply and readable
+
+declaration is in (main.dart)[lib/main.dart]
+
+## recover values
+to watch values has simply use ``context.read<ProviderController>()`` and has (selector)[https://pub.dev/documentation/provider/latest/provider/Selector-class.html] to get limited quantity of values without need rebuild every any time.
+
+has the usage of ``context.watch<UserModel>();`` to watch a value .
+
+has the usage of (Tuple package)[https://pub.dev/packages/tuple] to get multiples selectors, without need every
